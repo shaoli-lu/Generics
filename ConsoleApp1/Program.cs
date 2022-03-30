@@ -305,15 +305,34 @@ namespace Generics
             //enum
             Console.WriteLine(Planets.Pluto + " is #" + (int)Planets.Pluto);
 
+            string myString = @"Go to your c:\ drive";
+            string myString2 = string.Format("{0:C1}", 123.45);
+            string myString3 = string.Format("{0:N}", 1234567890);
+            string myString4 = string.Format("Percent: {0:P}", .1234);
+            string myString5 = string.Format("Phone Number: {0:(###) ###-####}", 4142986166);
+            
+            Console.WriteLine(myString);
+            Console.WriteLine();
+            Console.WriteLine(myString2);
+            Console.WriteLine( );
+            Console.WriteLine(myString3);
+            Console.WriteLine();
+            Console.WriteLine(myString4);
+            Console.WriteLine();
+            Console.WriteLine(myString5);
+            Console.WriteLine();
+
             string name = PlanetRadius.Earth.ToString();
             int radius = (int)PlanetRadius.Earth;
             double volume = GetVolume(name, radius);
+            // decimal
             decimal volDecimal = (decimal)volume;
-            Console.WriteLine(volume);
-            Console.WriteLine(volDecimal.ToString("F"));
-            Console.WriteLine(volDecimal.ToString("#.##"));
-            Console.WriteLine(volDecimal.ToString("C"));
-            Console.WriteLine(String.Format("{0:C}", volDecimal));
+            Console.WriteLine(volume); //4 decimals
+            Console.WriteLine(volDecimal.ToString("F")); // 2 decimals
+            Console.WriteLine(volDecimal.ToString("#.##")); // 2 decimals
+            Console.WriteLine(volDecimal.ToString("C")); // 2 decimals $
+            //string.Format
+            Console.WriteLine(String.Format("{0:C}", volDecimal)); // 2 decimals $
 
             Console.WriteLine($"Volume for {name} is { String.Format("{0:0.00}", volume)}");
 
