@@ -316,6 +316,14 @@ namespace Generics
             Console.WriteLine(myString2);
             Console.WriteLine( );
             Console.WriteLine("Money: {0:C}", 1234.56);
+            //The decimal suffix is M / m since D/ d was already taken by double.Although it has been suggested that M stands for money, Peter Golde recalls that M was chosen simply as the next best letter in decimal.
+            var f = 0f; // float
+            var d = 0d; // double
+            var m = 0m; // decimal (money)
+            var u = 0u; // unsigned int
+            var l = 0l; // long
+            var ul = 0ul; // unsigned long
+
             Console.WriteLine( );
             Console.WriteLine(myString3);
          
