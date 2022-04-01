@@ -251,15 +251,15 @@ namespace Generics
         public void doSomething()
         {
             var myUser = new User();
-            myUser.FirstName = "Caleb";
-            myUser.LastName = "Curry";
+            myUser.FirstName = "Shaoli";
+            myUser.LastName = "Lu";
             var message = myUser.Output(3);
             Console.WriteLine(message);
             Console.WriteLine($"My name is {myUser.FullName}!");
             
             var myUser2 = new User();
-            myUser2.FirstName = "Caleb";
-            myUser2.LastName = "Curry";
+            myUser2.FirstName = "Shaoli";
+            myUser2.LastName = "Lu";
             var users = new List<User>();
             users.Add(myUser);
             users.Add(myUser2);
@@ -282,8 +282,8 @@ namespace Generics
             }
 
             var search = new User();
-            search.FirstName = "Caleb";
-            search.LastName = "Curry";
+            search.FirstName = "Shaoli";
+            search.LastName = "Lu";
             if(User.Find(users,search)>= 0)
             Console.WriteLine("Found!");
 
@@ -315,7 +315,10 @@ namespace Generics
             Console.WriteLine();
             Console.WriteLine(myString2);
             Console.WriteLine( );
+            Console.WriteLine("Money: {0:C}", 1234.56);
+            Console.WriteLine( );
             Console.WriteLine(myString3);
+         
             Console.WriteLine();
             Console.WriteLine(myString4);
             Console.WriteLine();
