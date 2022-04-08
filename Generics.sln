@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "ConsoleApp1\Generics.csproj", "{3E458214-25C9-4D24-8017-39B0BD40FD08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandlers", "EventHandlers\EventHandlers.csproj", "{2EE89BAD-FB82-4598-8373-CF3D643B220F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHandlers", "EventHandlers\EventHandlers.csproj", "{2EE89BAD-FB82-4598-8373-CF3D643B220F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj", "{91EDCD48-7989-409E-A26D-5EA5DFF6E7F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2EE89BAD-FB82-4598-8373-CF3D643B220F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE89BAD-FB82-4598-8373-CF3D643B220F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE89BAD-FB82-4598-8373-CF3D643B220F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EDCD48-7989-409E-A26D-5EA5DFF6E7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EDCD48-7989-409E-A26D-5EA5DFF6E7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EDCD48-7989-409E-A26D-5EA5DFF6E7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EDCD48-7989-409E-A26D-5EA5DFF6E7F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
