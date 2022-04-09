@@ -67,6 +67,32 @@ new Car() { VIN ="E5", Make= "BMW", Model= "55i", StickerPrice=57000, Year=2022}
             Console.WriteLine("--First");
             Console.WriteLine(cars.OrderByDescending(p=>p.Year).Select(p=> new {p.Make, p.Year,p.Model}).First(p=>p.Make=="BMW").ToString());
             Console.ReadLine();
+
+            //var CAquery = from temp in CAtemp
+            //              join casect in CAdb.sectors
+            //              on temp.sector_code equals casect.sector_code
+            //              select new
+            //              {
+            //                  //anonymous types
+            //                  CUSIP = temp.equity_cusip,
+            //                  CompName = temp.company_name,
+            //                  Exchange = temp.primary_exchange
+            //              };
+
+
+            //var CAquery = CAtemp.Join(CAdb.sectors,
+            //              temp => temp.sector_code,
+            //              casect => casect.sector_code,
+            //              (temp, casect) => new
+            //              {
+            //                  CUSIP = temp.equity_cusip,
+            //                  CompName = temp.company_name,
+            //                  Exchange = temp.primary_exchange
+            //              });
+
+            var result = new GroupJoin();
+            result.GetGroup();
+
         }
     }
 }
