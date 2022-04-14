@@ -17,7 +17,7 @@ namespace Linq
             var peoples = new List<Person>();
             List<Person> people = new() { magnus, terry, charlotte, arlene };
 
-            List<Pet> pets = new List<Pet>()
+            var pets = new List<Pet>()
             {
                 new("Barley", terry),
                 new("Boots", terry),
