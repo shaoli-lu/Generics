@@ -93,6 +93,34 @@ new Car() { VIN ="E5", Make= "BMW", Model= "55i", StickerPrice=57000, Year=2022}
             var result = new GroupJoin();
             result.GetGroup();
 
+
+            //deferred execution example
+
+            //var resultNum = GenerateNumbers(10)
+            //    .Where(n => n % 2 == 0)
+            //    .Select(n => n * 3);
+            var even = true;
+          
+            var resultNum = GenerateNumbers(10);
+            if (even)
+            {
+                resultNum = resultNum.Where(n => n % 2 == 0);
+            }
+            resultNum = resultNum.Select(n => n * 3);
+
+            Console.WriteLine("Deferred execution example");
+            foreach (var item in resultNum)
+            {
+                Console.WriteLine(item);
+            }
+
+            IEnumerable<int> GenerateNumbers(int maxValue)
+            {
+                for (int i = 0; i < maxValue; i++)
+                {
+                    yield return i;
+                }
+            }
         }
     }
 }
