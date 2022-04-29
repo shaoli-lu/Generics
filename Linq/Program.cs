@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Linq
 {
@@ -121,6 +124,30 @@ new Car() { VIN ="E5", Make= "BMW", Model= "55i", StickerPrice=57000, Year=2022}
                     yield return i;
                 }
             }
+
+            // mock data
+
+            mockData();
+        }
+
+        static void mockData()
+        {
+
+            // https://mockaroo.com/
+            Console.ReadLine();
+            var fileContent = File.ReadAllText("Data/MOCK_DATA.json");
+
+            var carsMock = JsonSerializer.Deserialize<CarData[]>(fileContent);
+
+            // print all cars with at least 4 doors
+
+            var carWithAtLeastFourDoors = carsMock.Where(c => c.NumberOfDoors >= 4);
+
+            foreach (var car in carWithAtLeastFourDoors)
+            {
+                Console.WriteLine($"The car {car.Model} has {car.NumberOfDoors} doors");
+            }
+
         }
     }
 }
