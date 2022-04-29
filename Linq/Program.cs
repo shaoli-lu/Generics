@@ -148,6 +148,16 @@ new Car() { VIN ="E5", Make= "BMW", Model= "55i", StickerPrice=57000, Year=2022}
                 Console.WriteLine($"The car {car.Model} has {car.NumberOfDoors} doors");
             }
 
+            Console.ReadLine();
+            // top 10 most powerful cars
+            carsMock.OrderByDescending(car => car.HP)
+            .Take(10)
+            .Select(car => $"{car.HP} {car.Make} {car.Model}")
+            .ToList()
+            .ForEach(car => Console.WriteLine(car));
+
+
+
         }
     }
 }
